@@ -1,0 +1,20 @@
+#!/bin/bash
+
+CONTAINER_NAME="dns_demo"
+
+# build container
+docker build -t dns_demo .
+
+if [ ! -d tmp ]; then
+  mkdir tmp
+fi
+
+# start container
+docker run -d -p 8888:8888 --name dns_demo -v tmp:/data $CONTAINER_NAME
+sleep 2
+
+# get url
+echo "use the below url to get to your notebook:"
+docker logs dns_demo 2>&1 | perl -nE 'say/(http:\/\/[a-f0-9]+:8888\/\?token=[a-f0-9]+&token=[a-f0-9]+)/' | tr -d '[:space:]' | sed 's/http:\/\/.*:/http:\/\/localhost:/g'
+echo ""
+

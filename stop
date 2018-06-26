@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker stop dns_demo
+docker rm dns_demo
