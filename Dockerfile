@@ -10,5 +10,5 @@ RUN apt-get install -y curl jq
 RUN apt-get clean \
       && rm -rf /var/lib/apt/lists/*
 
-ENV NB_UID=1000
 USER $NB_UID
+
