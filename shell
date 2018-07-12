@@ -1,4 +1,4 @@
 #!/bin/sh
 CONTAINER_NAME="dns_demo"
 
-docker exec -i $CONTAINER_NAME /bin/bash
+docker exec -it $CONTAINER_NAME /bin/bash
