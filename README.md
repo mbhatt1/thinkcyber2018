@@ -3,7 +3,7 @@ Materials for ARCYBER's workshop at ThinkCyber 2018.
 
 ## Quick Start Guide
 
-1. Run the `start` script, which will start a Docker container hosting a Jupyter notebook server and mount the `jupyter` and `data` directories. Navigate to the URL printed to stdout at the end of the script to access your Jupyter notebook.
+1. Run the `start` script, which will start a Docker container hosting a Jupyter notebook server and mount the `jupyter/` and `data/` directories. Navigate to the URL printed to stdout at the end of the script to access your Jupyter notebook.
 
 2. Prototype analytics! The sample data and notebooks we have provided are used for an exercise to prototype a DNS tunnel detection analytic.
 
